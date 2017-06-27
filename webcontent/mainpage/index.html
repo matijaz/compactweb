@@ -1,0 +1,299 @@
+<!doctype html>
+
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="Program">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/style.css?v=1.0">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="mainContainer">
+		
+		<!-- top list -->
+		<section class="top">
+			<div class="line">
+				<div class="tl1 tl fLeft gradientBlue"><h1>Programm</h1></div>
+				<div class="tl2 tl fLeft gradientBlue text-center"><h1>01</h1></div>
+				<div class="tl3 tl fLeft gradientBlue"><h1>Wiener</h1></div>
+				
+				<!-- navigation left -->
+				<div class="tl4 tl fLeft gradientBlue" id="arrowLeft"><h1><i class="fa fa-arrow-left" aria-hidden="true"></i></h1></div>
+				
+				<div class="clearfix"></div>
+				
+			</div>
+			
+			<div class="line">
+				<div class="tl1 tl fLeft gradientBlue"><h1>Schritt</h1></div>
+				<div class="tl2 tl fLeft gradientBlue text-center"><h1>02</h1></div>
+				<div class="tl3 tl fLeft gradientBlue"><h1>Rotten</h1></div>
+				
+				<!-- navigation left -->
+				<div class="tl4 tl fLeft gradientBlue" id="arrowRight"><h1><i class="fa fa-arrow-right" aria-hidden="true"></i></h1></div>
+				
+				<div class="clearfix"></div>
+				
+			</div>
+		</section>
+		
+		<!-- top list -->
+		<section class="middlelist">
+			
+			<!-- list left -->
+			<div class="mlContainer fLeft">
+				<div class="line">
+					<div class="ml1 fLeft smallText text-center">ACTUAL</div>
+					<div class="ml2 fLeft smallText"></div>
+					<div class="ml3 fLeft smallText"></div>
+					<div class="ml4 fLeft smallText text-center paddingAdd">NOMINAL</div>
+
+					<div class="clearfix"></div>					
+				</div>
+				
+				<div class="line marginTop10">
+					<div class="ml1 ml fLeft gradientBlue"><h2>25.5</h2></div>
+					<div class="ml2 ml fLeft bgBlack"><div id="clock"></div></div>
+					<div class="ml3 ml fLeft bgBlack"><h3>°C</h3></div>
+					<div class="ml4 ml fLeft gradientBlack"><h4>50</h4></div>
+
+					<div class="clearfix"></div>					
+				</div>
+				
+				<div class="line marginTop10">
+					<div class="ml1 ml fLeft gradientBlue"><h2>25.5</h2></div>
+					<div class="ml2 ml fLeft bgBlack"><div id="tempopen"></div></div>
+					<div class="ml3 ml fLeft bgBlack"><h3>KW/h</h3></div>
+					<div class="ml4 ml fLeft gradientBlack"><h4>50000</h4></div>	
+
+					<div class="clearfix"></div>					
+				</div>
+				
+				<div class="line marginTop10">
+					<div class="ml1 ml fLeft gradientBlue"><h2>25.5</h2></div>
+					<div class="ml2 ml fLeft bgBlack"><div id="temp"></div></div>
+					<div class="ml3 ml fLeft bgBlack"><h3>mBar</h3></div>
+					<div class="ml4 ml fLeft gradientBlack"><h4>500000000</h4></div>	
+
+					<div class="clearfix"></div>					
+				</div>
+				
+				<div class="line marginTop10">
+					<div class="ml1 ml fLeft gradientBlue"><h2>25.5</h2></div>
+					<div class="ml2 ml fLeft bgBlack"><div id="cloud"></div></div>
+					<div class="ml3 ml fLeft bgBlack"><h3>h/m</h3></div>
+					<div class="ml4 ml fLeft gradientBlack"><h4>500000000000000</h4></div>	
+
+					<div class="clearfix"></div>					
+				</div>
+			</div>
+			
+			<!-- list right -->
+			<div class="mrContainer fLeft active" id="lista1">
+				<div>
+				<table class="display" cellspacing="0" width="100%">
+				<col><col><col>
+					<thead>
+						<tr>
+							<th>Nr</th>
+							<th>Aggregate</th>
+							<th>An</th>
+							<th></th>
+							
+						</tr>
+					</thead>
+				</table>
+				</div>
+				<div class="scrolling">
+				<table class="display" cellspacing="0" width="100%">
+				<col><col><col>
+					<tbody>
+						<tr class="bg-td">
+							<td>01</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>05</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>06</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>07</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>08</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>09</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>Active</td>
+							<td>x</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			
+			<div class="mrContainer fLeft" id="lista2">
+				<div>
+				<table class="display" cellspacing="0" width="100%">
+				<col><col><col>
+					<thead>
+						<tr>
+							<th>ROLE</th>
+							<th>STATUS</th>
+						
+						</tr>
+					</thead>
+				</table>
+				</div>
+				
+				<div class="scrolling">
+				<table class="display" cellspacing="0" width="100%">
+				<col><col><col>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>Active</td>
+						
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Active</td>
+						
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>Active</td>
+						
+						</tr>
+						<tr>
+							<td>Cedric Kelly</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>Active</td>
+				
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>Active</td>
+				
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Active</td>
+					
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			
+			
+			<div class="clearfix"></div>					
+		</section>
+		
+		
+		<!-- time -->
+		<section class="time">
+			<div class="fLeft timeWidth">ANLAGE AUßER BETRIEB</div>
+			<div class="fLeft timeWidth textRight">66:66:66</div>
+			
+			<div class="clearfix"></div>					
+		</section>
+		
+		<section class="footerMenu">
+			<div class="btnBottom gradientBlack">menue</div>
+			<div class="btnBottom gradientBlack"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+			<div class="btnBottom gradientBlack"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="btnBottom gradientBlack">programm</div>
+			<div class="btnBottom gradientBlack last">start</div>
+			
+		</section>
+		
+		
+	</div>
+
+	
+	<script src="assets/js/scripts.js"></script>
+</body>
+</html>
