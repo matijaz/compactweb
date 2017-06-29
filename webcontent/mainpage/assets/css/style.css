@@ -29,6 +29,7 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#747474', endColorstr='#2f2f2f',GradientType=0 ); /* IE6-9 */
 }
 
+
 h1{
 	font-size:25px;
 	margin:0;
@@ -45,7 +46,7 @@ h3{
 }
 
 h4{
-	font-size: 25px; 
+	font-size:42px;
 	margin:0;
 }
 
@@ -113,7 +114,7 @@ h4{
 
 .ml1{
 	width:230px;
-	height:81px;	
+	height:80px;	
 }
 
 .ml2{
@@ -139,6 +140,23 @@ h4{
 	padding-top:12px;
 }
 
+.main > .ml4 {
+	line-height: 50px;
+}
+
+
+.ml4 > span {
+	font-weight: bold;
+	margin-bottom: 50px;
+	/*border: 1px solid red;*/
+}
+
+.ml3 > span {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
 .smallText{
 	font-size:20px;
 	height:20px;
@@ -150,43 +168,43 @@ h4{
 	margin-top:10px;
 }
 
-#clock{
+.clock{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 0;
 }
 
-#tempopen{
+.tempopen{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -60px;
 }
 
-#temp{
+.temp{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -120px;
 }
 
-#cloud{
+.cloud{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -180px;
 }
 
-#fun{
+.fun{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -240px;
 }
 
-#blue{
+.blue{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -300px;
 }
 
-#none{
+.none{
 	width:53px;
 	height:60px;
     background: url(../images/icons.png) 0 -360px;
@@ -198,12 +216,11 @@ h4{
 	width:265px;
 	margin-left:10px;
 	margin-top:30px;
-	/* height:350px;
-	overflow-y:scroll; */
+	/*overflow-y:scroll; */
 }
 
 .scrolling{
-	height:324px;
+	height:321px;
 	overflow-y:scroll;
 }
 
@@ -226,74 +243,67 @@ h4{
 /* gray list */
 table{
 	background:#fff;
+	text-align: left;
 	color:#000;
 	font-size:18px;
-	font-weight:bold;
 }
 
 table thead{
-	background:#fff;
-	color:#000;
-	font-size:18px;
-	font-weight:bold;
+	background:#ccc;
 }
 
 table tr th{
-	padding:4px 0;
-	border-right:solid 1px #000;
-	border-bottom:solid 1px #000;
-	text-align:left;
-	padding-left:2px;
-	background:#c5c5c5;
+	padding: 3px 2px;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
 }
 
 table tr td{
-	padding:2px;
-	padding-bottom:2px;
-	border-right:solid 1px #b9b9b9;
-	border-bottom:solid 1px #b9b9b9;
-	padding-left:2px;
+	border-right: solid 1px #debdde; /*#b9b9b9;*/
+	border-bottom: solid 1px #debdde; /*#b9b9b9;*/
+	text-align: left;
+	padding: 1px 3px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
 }
 
-#lista1 th:nth-child(1){
+#RelayList th:nth-child(1){
 	width:35px;
 }
-#lista1 th:nth-child(2){
-	width:170px;
-} 
-#lista1 th:nth-child(3){
-	/* width:35px; */
-	border-right:none;
-} 
+#RelayList th:nth-child(2){
+	width:185px;
+}
+/*#RelayList th:nth-child(3){*/
+	/*width:32px;*/
+/*}*/
 
-#lista1 td:nth-child(1){
+#RelayList td:nth-child(1){
 	width:35px;
 }
-#lista1 td:nth-child(2){
-	width:170px;
-} 
-#lista1 td:nth-child(3){
-	/* width:35px; */
-} 
-
-#lista2 th:nth-child(1){
-	width:150px;
-}
-
-.bg-td{
-	background:red;
-	color:#fff;
+#RelayList td:nth-child(2){
+	width:185px;
 }
 
 
-/* tutaj zmieniamy jakbysmy chcieli co drugi row */
 
-table tr:nth-child(even) {
-	background: #fff;
-	color:#000;
+
+#StepList th:nth-child(1){
+	width:35px;
+}
+#StepList td:nth-child(1){
+	width:35px;
 }
 
-#lista2{
+/* col:first-child {background: #FF0} */
+
+/*table tr:nth-child(even) {*/
+	/*background: #f1f1f1;*/
+	/*color:#444;*/
+/*}*/
+
+#StepList{
 	display:none;
 }
 
@@ -315,8 +325,12 @@ table tr:nth-child(even) {
 	font-weight:bold;
 }
 
+.messageWidth {
+	width:85%;
+}
+
 .timeWidth{
-	width: 50%;
+	width: 15%;
 }
 
 /* footer */
@@ -335,6 +349,8 @@ table tr:nth-child(even) {
 	width:156px;
 	text-align:center;
 	font-size:20px;
+	height: 60px;
+	vertical-align: top;
 }
 
 .last{
