@@ -12,16 +12,16 @@ $(document).ready(function () {
     function getData() {
 
         $.ajax({
-            url: "input.php",
+            url: "input.txt",
             // data: dataToSend,
             // type: 'post',
             success: function (data) {
-
+                //console.log(data);
                 try {
                     var inputData = JSON.parse(data);
                 } catch (e) {
                     console.log("Input data malformed");
-                    // console.log(e);
+                    //console.log(e);
                     return;
                 }
                 console.log("Got new data: "); // + data);
