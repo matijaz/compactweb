@@ -154,6 +154,7 @@ h4{
 .ml3 > span {
 	font-weight: bold;
 	margin-bottom: 20px;
+	font-size:25px;
 }
 
 
@@ -380,4 +381,3 @@ table tr td{
 .text-center{
 	text-align:center;
 }
-

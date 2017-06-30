@@ -198,8 +198,6 @@
 			// Contains the child element we will resize.
 			// $(this) means the parent container
 
-			//moja zmiana!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			// var ourText = $(Opts.innerTag + ':visible:first', this);
 			var ourText = $(Opts.innerTag, this).filter(function(el) {
 				return $(el).css('display') !== 'hidden';
 			}).first();
