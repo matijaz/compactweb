@@ -1,12 +1,9 @@
 $(document).ready(function () {
     var inteval = 1000;
-    var test = 0;
 
     loop();
 
     function loop() {
-        // test++;
-        // if(test > 6) return;
         getData();
         setTimeout(loop, inteval);
     }
@@ -16,12 +13,12 @@ $(document).ready(function () {
         $.ajax({
             url: "input.php",
             success: function (data) {
-
+                //console.log(data);
                 try {
                     var inputData = JSON.parse(data);
                 } catch (e) {
                     console.log("Input data malformed");
-                    // console.log(e);
+                    //console.log(e);
                     return;
                 }
                 console.log("Got new data: "); // + data);
