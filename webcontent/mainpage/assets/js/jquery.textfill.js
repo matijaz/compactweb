@@ -123,7 +123,6 @@
 		 * @return Size (in pixels) that the font can be resized.
 		 */
 		function _sizing(prefix, ourText, func, max, maxHeight, maxWidth, minFontPixels, maxFontPixels) {
-
 			_debug_sizing(
 				prefix, ourText,
 				maxHeight, maxWidth,

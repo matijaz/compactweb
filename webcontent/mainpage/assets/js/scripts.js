@@ -1,10 +1,12 @@
 $(document).ready(function () {
     var inteval = 1000;
-    // var test = 0;
+    var test = 0;
 
     loop();
 
     function loop() {
+        // test++;
+        // if(test > 6) return;
         getData();
         setTimeout(loop, inteval);
     }
@@ -13,8 +15,6 @@ $(document).ready(function () {
 
         $.ajax({
             url: "input.php",
-            // data: dataToSend,
-            // type: 'post',
             success: function (data) {
 
                 try {
@@ -55,6 +55,7 @@ $(document).ready(function () {
 
         scaleValues();
 
+        // animateStatus();
     }
 
     function setTitle(input) {
@@ -72,6 +73,9 @@ $(document).ready(function () {
     }
 
     function setMainValues(input) {
+        $("#lblActual").html(input.LanguageDefinition.lblActual);
+        $("#lblNominal").html(input.LanguageDefinition.lblNominal);
+
         $("#main1 .actValue").html(input.MainValueList.MainValue1.ActValue);
         $("#main1 .unit").html(input.MainValueList.MainValue1.Unit);
         $("#main1 .nomValue").html(input.MainValueList.MainValue1.NomValue);
@@ -204,7 +208,21 @@ $(document).ready(function () {
         // $("#main1 .nomValue").html(test);
         // test = test * 10;
 
-        $('.main .nomValue').parent().textfill({
+        $('.main .actValue').parent().textfill({
+            widthOnly: true,
+            maxFontPixels: 55,
+            minFontPixels: 20,
+            // innerTag: "div",
+            success: function () {
+                console.log("resize success");
+            },
+            fail: function () {
+                console.log("resize fail");
+                // scaleValues(this);
+            }
+        });
+
+        $('.main .unit').parent().textfill({
             widthOnly: true,
             maxFontPixels: 42,
             minFontPixels: 20,
@@ -214,16 +232,14 @@ $(document).ready(function () {
             },
             fail: function () {
                 console.log("resize fail");
-                test = 1;
+                // scaleValues(this);
             }
         });
 
-
-        $('.main .unit').parent().textfill({
+        $('.main .nomValue').parent().textfill({
             widthOnly: true,
-            // debug: true,
             maxFontPixels: 42,
-            minFontPixels: 20,
+            minFontPixels: 10,
             // innerTag: "div",
             success: function () {
                 console.log("resize success");
@@ -233,6 +249,7 @@ $(document).ready(function () {
                 // test = 1;
             }
         });
+
     }
 
 
