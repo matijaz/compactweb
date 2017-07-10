@@ -29,6 +29,14 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#747474', endColorstr='#2f2f2f',GradientType=0 ); /* IE6-9 */
 }
 
+.gradientRed{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bc0000+0,bc0000+100 */
+	background: #bc0000; /* Old browsers */
+	background: -moz-linear-gradient(top, #bc0000 0%, #bc0000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #bc0000 0%,#bc0000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #bc0000 0%,#bc0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc0000', endColorstr='#bc0000',GradientType=0 ); /* IE6-9 */	
+}
 
 h1{
 	font-size:25px;
