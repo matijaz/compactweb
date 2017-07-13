@@ -223,6 +223,16 @@ span {
 }
 
 
+
+.alarm{
+	width:189px;
+	height:65px;
+    background: url(../images/alarm.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
 /* right list */
 .mrContainer{
 	width:265px;
