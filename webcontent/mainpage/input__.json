@@ -2,14 +2,6 @@
   "HtmlTitle": "10_42 MS120 v20.24 310517",
   "LanguageApp": "RUS",
   "LanguageSrv": "GER",
-  "IsAlarmOn": true,
-  "OperationMode": 2,
-  "ProgramNo": "02",
-  "StepNo": "01",
-  "ProgramName": "A37_P2_Test",
-  "StepName": "Klima Reifen",
-  "StatusBarMessage": "установка работает безпрерывный повтор  нет ответа от сенсора Glimmtemperatur нет ответа от сенсора Rauchtemperatur нет ответа от сенсора Внешняя температура нет ответа от сенсора Внешняя влажность Temp. 2° < Sollwert Kälteüberwachung Not-Halt aktiv! Druckwächter Druckluft ausgefallen! Steuerspannung ausgefallen! ÜT Sammelalarm Übertemperatur - Löschen aktiv! SWR-Zurau. zu nicht geschlossen! Rauchkl. zu nicht geschlossen! Abrauchkl. zu nicht geschlossen! Abluftkl. o. nicht offen! Umluftmotor Störung! Sensorförderung offen! MG-Tür offen!",
-  "StatusBarTime": "13:24:38",
   "LanguageDefinition": {
     "lblProgram": "прог.",
     "lblStep": "шаг",
@@ -19,17 +11,12 @@
     "cmdBottom4": "Пауза",
     "cmdBottom5": "стоп"
   },
-  "ButtonStatus": {
-    "lblStep": "alarm.png",
-    "cmdBottom4": "gradientRed,blink",
-    "cmdBottom5": "gradientBlue"
-  },
   "MainValueList": {
     "MainValue1": {
       "Name": "chamber",
       "Unit": "°C",
       "ActValue": "26,5",
-      "NomValue": "95"
+      "NomValue": "выкл."
     },
     "MainValue2": {
       "Name": "vacuum",
@@ -39,15 +26,15 @@
     },
     "MainValue3": {
       "Name": "airstep",
-      "Unit": "",
+      "Unit": "m/s",
       "ActValue": "0",
       "NomValue": "0"
     },
     "MainValue4": {
       "Name": "time",
       "Unit": "ч/м",
-      "ActValue": "47:25",
-      "NomValue": "00:00"
+      "ActValue": "00:01",
+      "NomValue": "00:01"
     }
   },
   "StepList": {
@@ -58,107 +45,87 @@
     "Data": [
       [
         "01",
-        "Klima Reifen",
+        "Reinigen",
         "color=1"
       ],
       [
         "02",
-        "Dauer Reifen",
-        ""
+        "Spülen"
       ],
       [
         "03",
-        "Mod. Reifen",
-        ""
+        "Pause"
       ],
       [
         "04",
-        "Trocknen",
         ""
       ],
       [
         "05",
-        "Evakuieren",
         ""
       ],
       [
         "06",
-        "Räuchern",
         ""
       ],
       [
         "07",
-        "Rauchvernichten",
         ""
       ],
       [
         "08",
-        "Reinigen",
         ""
       ],
       [
         "09",
-        "Spülen",
         ""
       ],
       [
         "10",
-        "Pause",
         ""
       ],
       [
         "11",
-        "Schwarzwaldrauch",
         ""
       ],
       [
         "12",
-        "",
         ""
       ],
       [
         "13",
-        "",
         ""
       ],
       [
         "14",
-        "",
         ""
       ],
       [
         "15",
-        "",
         ""
       ],
       [
         "16",
-        "",
         ""
       ],
       [
         "17",
-        "",
         ""
       ],
       [
         "18",
-        "",
         ""
       ],
       [
         "19",
-        "",
         ""
       ],
       [
         "20",
-        "",
         ""
       ],
       [
         "21",
-        "",
         ""
       ]
     ]
@@ -171,43 +138,15 @@
     ],
     "Data": [
       [
-        "01",
-        "Signal",
-        "0"
-      ],
-      [
         "02",
         "Umluftmotor",
-        "1",
+        "0",
         "color=1"
       ],
       [
         "08",
         "Brand Meldung",
-        "0"
-      ],
-      [
-        "09",
-        "Befeuchtung",
         "0",
-        ""
-      ],
-      [
-        "10",
-        "Kühlung",
-        "0",
-        ""
-      ],
-      [
-        "12",
-        "Heizung HD 1",
-        "1",
-        "color=1"
-      ],
-      [
-        "13",
-        "Heizung HD 2",
-        "1",
         "color=1"
       ],
       [
@@ -223,19 +162,32 @@
         ""
       ],
       [
+        "17",
+        "Reinigungspumpe",
+        "1",
+        "color=1"
+      ],
+      [
+        "18",
+        "Reinigen",
+        "0",
+        ""
+      ],
+      [
+        "19",
+        "Spülen",
+        "0"
+      ],
+      [
         "20",
         "Rauchklappe",
-        "0"
+        "1",
+        "color=1"
       ],
       [
         "21",
         "Förderung",
         "1"
-      ],
-      [
-        "22",
-        "Zündung",
-        "0"
       ],
       [
         "23",
@@ -251,6 +203,54 @@
         "25",
         "Schwemmen",
         "0"
+      ],
+      [
+        "27",
+        "Str. Druck r/u",
+        "0",
+        ""
+      ],
+      [
+        "28",
+        "Str. Druck r/o",
+        "0",
+        ""
+      ],
+      [
+        "29",
+        "Str. Mischg.",
+        "0",
+        ""
+      ],
+      [
+        "30",
+        "Str. Raucherz.",
+        "0",
+        ""
+      ],
+      [
+        "31",
+        "Str. Wende/Saug",
+        "0",
+        ""
+      ],
+      [
+        "32",
+        "Str. Register",
+        "0",
+        ""
+      ],
+      [
+        "33",
+        "Str. Druck l/o",
+        "0",
+        ""
+      ],
+      [
+        "34",
+        "Str. Druck l/u",
+        "0",
+        ""
       ],
       [
         "36",
@@ -283,11 +283,6 @@
         ""
       ],
       [
-        "48",
-        "Abluftmotor",
-        "0"
-      ],
-      [
         "49",
         "Freigabeklappen",
         "1",
@@ -296,22 +291,12 @@
       [
         "55",
         "Abrauchklappe",
-        "0"
+        "1",
+        "color=1"
       ],
       [
-        "58",
-        "*Enth.gesperrt",
-        "1"
-      ],
-      [
-        "59",
-        "Enthalpie",
-        "0",
-        "color=3"
-      ],
-      [
-        "60",
-        "*Außenluft-Frg",
+        "56",
+        "MVZul. Dosatron",
         "0",
         ""
       ],
@@ -323,31 +308,6 @@
       [
         "62",
         "*Dauerlöschen",
-        "0"
-      ],
-      [
-        "65",
-        "*Wiegung aktiv",
-        "0"
-      ],
-      [
-        "67",
-        "*Virt.Pos 25",
-        "0"
-      ],
-      [
-        "68",
-        "*Virt.Pos 50",
-        "0"
-      ],
-      [
-        "69",
-        "*Virt.Pos 75",
-        "0"
-      ],
-      [
-        "70",
-        "*Virt.Pos 100",
         "0"
       ]
     ]
@@ -363,6 +323,13 @@
     "1": "#FFFF00",
     "2": "#6495ED",
     "3": "#008000"
-  }
+  },
+  "OperationMode": 2,
+  "ProgramNo": "04",
+  "StepNo": "01",
+  "ProgramName": "REINIGUNG     ",
+  "StepName": "Reinigen                 ",
+  "StatusBarMessage": "установка работает безпрерывный повтор  нет ответа от сенсора Glimmtemperatur нет ответа от сенсора Rauchtemperatur Not-Halt aktiv! Druckwächter Druckluft ausgefallen! Steuerspannung ausgefallen! ÜT Sammelalarm Übertemperatur - Löschen aktiv! SWR-Zurau. zu nicht geschlossen! Rauchkl o. nicht offen! Abluftkl. o. nicht offen! Abrauchkl. o. nicht offen! Sensorförderung offen!",
+  "StatusBarTime": "12:54:37"
 }
 

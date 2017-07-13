@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var inteval = 1000;
+    var inteval = 1000,
+        alarms = {};
 
     loop();
 
@@ -51,6 +52,9 @@ $(document).ready(function () {
 
 
         scaleValues();
+
+        //alarms
+        displayAlarms(input);
 
         // animateStatus();
     }
@@ -246,7 +250,74 @@ $(document).ready(function () {
                 // test = 1;
             }
         });
+    }
 
+    function displayAlarms(input) {
+        alarmElement("cmdBottom4", input);
+        alarmElement("cmdBottom5", input);
+    }
+
+    function alarmElement(elem, input) {
+        var button = $("#" + elem);
+        if (typeof input.ButtonStatus[elem] == "string" && input.ButtonStatus[elem] !== "") {
+            var alarm = {
+                css: input.ButtonStatus[elem].split(","),
+                timer: 0
+            };
+            // button.removeClass("gradientBlack");
+
+            if (typeof alarms[elem] !== "undefined") {
+                //if new alarm is different class
+                if (alarms[elem].css[0] !== alarm.css[0]) {
+                    if (alarms[elem].timer > 0) {
+                        clearInterval(alarms[elem].timer);
+                    }
+                    button.removeClass(alarms[elem].css[0]);
+
+                    button.addClass(alarm.css[0]);
+                    if (typeof alarm.css[1] == "undefined" && alarm.css[1] == "blink")
+                        alarm.timer = blink(button, alarm.css[0]);
+                    //if new alarm is the same class but different blink status
+                } else if (typeof alarm.css[1] !== "undefined" && alarm.css[1] == "blink") {
+                    if (alarms[elem].timer == 0) {
+                        alarm.timer = blink(button, alarm.css[0]);
+                    } else {
+                        alarm.timer = alarms[elem].timer;
+                    }
+                } else {
+                    if (alarms[elem].timer > 0) {
+                        clearInterval(alarms[elem].timer);
+                        button.addClass(alarm.css[0]);
+                    }
+                }
+            } else {
+                button.addClass(alarm.css[0]);
+                if (typeof alarm.css[1] !== "undefined" && alarm.css[1] == "blink") {
+                    alarm.timer = blink(button, alarm.css[0]);
+                }
+            }
+
+            alarms[elem] = alarm;
+
+        } else {
+            if (typeof alarms[elem] !== "undefined" && alarms[elem].css[0] !== "") {
+                if (alarms[elem].timer > 0) {
+                    clearInterval(alarms[elem].timer);
+                }
+                button.removeClass(alarms[elem].css[0]);
+            }
+            alarms[elem] = undefined;
+            // button.addClass("gradientBlack");
+        }
+    }
+
+    function blink(button, css) {
+        var timer = setInterval(blinking, 500);
+
+        function blinking() {
+            button.toggleClass(css);
+        }
+        return timer;
     }
 
 
