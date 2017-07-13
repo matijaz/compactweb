@@ -20,7 +20,7 @@
     "cmdBottom5": "стоп"
   },
   "ButtonStatus": {
-    "lblStep": "alarm.png",
+    "lblStep": "alarm",
     "cmdBottom4": "gradientRed,blink",
     "cmdBottom5": "gradientBlue"
   },

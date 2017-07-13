@@ -68,7 +68,7 @@ $(document).ready(function () {
         $("#programNo").html(input.ProgramNo);
         $("#programName").html(input.ProgramName);
 
-        $("#lblStep").html(input.LanguageDefinition.lblStep);
+        $("#lblStep > h1").html(input.LanguageDefinition.lblStep);
         $("#stepNo").html(input.StepNo);
         $("#stepName").html(input.StepName);
     }
@@ -253,11 +253,19 @@ $(document).ready(function () {
     }
 
     function displayAlarms(input) {
-        alarmElement("cmdBottom4", input);
-        alarmElement("cmdBottom5", input);
+        //alarm icon
+        if(typeof input.ButtonStatus.lblStep !== "undefined" && input.ButtonStatus.lblStep !== "") {
+            $("#lblStep h1").html("");
+            $("#lblStep").addClass("alarm");
+        } else {
+            $("#lblStep").removeClass("alarm");
+        }
+
+        alarmButton("cmdBottom4", input);
+        alarmButton("cmdBottom5", input);
     }
 
-    function alarmElement(elem, input) {
+    function alarmButton(elem, input) {
         var button = $("#" + elem);
         if (typeof input.ButtonStatus[elem] == "string" && input.ButtonStatus[elem] !== "") {
             var alarm = {
